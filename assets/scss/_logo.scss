@@ -1,0 +1,141 @@
+.c-logo {
+  position: fixed;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  background-color: #fff;
+  cursor: pointer;
+
+  .logo {
+    background-color: #fff;
+    height: 125px;
+    width: 125px;
+    border-radius: 100px;
+    padding: 15px;
+    box-shadow: 3px 4px 11px 0px rgba(#101010, 10%);
+    border: 4px solid rgb(240, 240, 240);
+    position: relative;
+    z-index: 10;
+    img {
+      width: 100%;
+    }
+  }
+
+  .block-1,
+  .block-2,
+  .block-3,
+  .block-4 {
+    position: absolute;
+    height: 110px;
+    width: 110px;
+    background-color: orange;
+    border-radius: 10px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    border: 1px solid #fff;
+    transform: translateY(-50%) translateX(-50%);
+    transition: all 0.5s;
+  }
+
+  .block-1 {
+    border-top-right-radius: 110px;
+
+    margin-top: -50px;
+    margin-left: 50px;
+  }
+  .block-2 {
+    border-bottom-right-radius: 110px;
+
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+  .block-3 {
+    border-bottom-left-radius: 110px;
+
+    margin-top: 50px;
+    margin-left: -50px;
+  }
+  .block-4 {
+    border-top-left-radius: 150px;
+    margin-top: -50px;
+    margin-left: -50px;
+  }
+  &:hover {
+    .block-1 {
+      margin-top: -60px;
+      margin-left: 60px;
+    }
+    .block-2 {
+      margin-top: 60px;
+      margin-left: 60px;
+    }
+    .block-3 {
+      margin-top: 60px;
+      margin-left: -60px;
+    }
+    .block-4 {
+      margin-top: -60px;
+      margin-left: -60px;
+    }
+  }
+  .block-text-1,
+  .block-text-2,
+  .block-text-3,
+  .block-text-4 {
+    background-color: #fff;
+    max-width: 200px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin: 0 auto;
+
+    a {
+      display: block;
+      padding: 10px 25px;
+      border: 1px solid #dedede;
+      height: 100px;
+      font-weight: 700;
+      color: #000;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+    }
+  }
+
+  .block-text-1 {
+    top: -50%;
+    left: 90%;
+    right: auto;
+  }
+  .block-text-2 {
+    top: 55%;
+    left: 90%;
+    right: auto;
+    a {
+      align-items: flex-end;
+    }
+  }
+  .block-text-3 {
+    top: 55%;
+    right: 90%;
+    left: auto;
+    a {
+      align-items: flex-end;
+    }
+  }
+  .block-text-4 {
+    top: -50%;
+    right: 90%;
+    left: auto;
+  }
+}
