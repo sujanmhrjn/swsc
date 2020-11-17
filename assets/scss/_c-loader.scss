@@ -1,0 +1,30 @@
+.c-loader{
+    background-color: #fff;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logo {
+        background-color: #fff;
+        height: 125px;
+        width: 125px;
+        border-radius: 100px;
+        padding: 15px;
+        
+        border: 4px solid rgb(240, 240, 240);
+     
+        z-index: 10;
+            animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+        img {
+          width: 100%;
+        }
+      }
+}
