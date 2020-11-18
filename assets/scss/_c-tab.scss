@@ -1,0 +1,16 @@
+.c-tab {
+  .tab-item {
+    display: none;
+    &.active {
+      display: block;
+    }
+
+    .logo-section,
+    .description-block,
+    .image-block,
+    .cta-button {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+}

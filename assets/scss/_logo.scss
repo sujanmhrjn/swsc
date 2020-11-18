@@ -3,24 +3,24 @@
   z-index: 20;
   top: 50%;
   left: 50%;
-  
+
   transform: translateY(-50%) translateX(-50%);
   background-color: #fff;
+  border-radius: 100px;
   cursor: pointer;
 
-  &::before{
+  &::before {
     position: absolute;
-    top:50%;
-    left:50%;
+    top: 50%;
+    left: 50%;
     right: 0;
     bottom: 0;
     transform: translate(-50%, -50%);
     margin: 0 auto;
-    content:"";
+    content: "";
     display: block;
     min-height: 400px;
     min-width: 400px;
-
   }
 
   .logo {
@@ -54,12 +54,11 @@
     left: 50%;
     z-index: 2;
     border: 1px solid #fff;
-    box-shadow: 0 10px 10px rgba(#000,0.2);
+    box-shadow: 0 10px 10px rgba(#000, 0.2);
     transform: translateY(-50%) translateX(-50%);
     opacity: 0;
-    transition: all 0.5s;
 
- 
+    transition: all 0.5s;
   }
 
   .block-1 {
@@ -112,16 +111,16 @@
     width: 100%;
     border-radius: 10px;
     border: 1px solid #000;
-    box-shadow: 10px 10px 10px rgba(#000,0.2);
+    box-shadow: 10px 10px 10px rgba(#000, 0.2);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     padding: 10px;
     margin: 0 auto;
-    opacity:0;
-    
-    transition:all 0.3s ease-in-out;
+    opacity: 0;
+
+    transition: all 0.3s ease-in-out;
 
     a {
       position: relative;
@@ -133,29 +132,30 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
     }
-    .image{
-      max-width:100px;
+    .image {
+      max-width: 100px;
       display: block;
       position: absolute;
       top: -55px;
       left: 20px;
-      height:60px;
-      width:60px;
+      height: 60px;
+      width: 60px;
       background-color: #fff;
-      border:2px solid #000;
+      border: 2px solid #000;
       border-radius: 100px;
       overflow: hidden;
-      padding:10px;
-      img{
-        width:100%;
+      padding: 10px;
+      img {
+        width: 100%;
         height: 60px;
       }
     }
-    &:hover{
-      border-color:$color-2;
-      box-shadow: 10px 10px 10px rgba($color-2,0.2);
+    &:hover {
+      border-color: $color-2;
+      background-color: $color-1;
+      color: #fff;
+      box-shadow: 10px 10px 10px rgba($color-2, 0.2);
     }
   }
 
@@ -163,7 +163,7 @@
     top: -50%;
     left: 90%;
     right: auto;
-    transform: scale(0.4) translate(-100%,100%);
+    transform: scale(0.4) translate(-100%, 100%);
     a {
       align-items: flex-start;
     }
@@ -172,7 +172,7 @@
     top: 55%;
     left: 90%;
     right: auto;
-    transform: scale(0.4) translate(-100%,-100%);
+    transform: scale(0.4) translate(-100%, -100%);
     a {
       align-items: flex-end;
     }
@@ -181,7 +181,7 @@
     top: 55%;
     right: 90%;
     left: auto;
-    transform: scale(0.4) translate(100%,-100%);
+    transform: scale(0.4) translate(100%, -100%);
     a {
       align-items: flex-end;
     }
@@ -190,21 +190,19 @@
     top: -50%;
     right: 90%;
     left: auto;
-    transform: scale(0.4) translate(100%,100%);
+    transform: scale(0.4) translate(100%, 100%);
     a {
       align-items: flex-start;
     }
   }
 
-  &:hover{
+  &:hover {
     .block-text-1,
     .block-text-2,
     .block-text-3,
-    .block-text-4{
+    .block-text-4 {
       opacity: 1;
       transform: scale(1);
     }
   }
-
-
 }
