@@ -157,6 +157,9 @@
       color: #fff;
       box-shadow: 10px 10px 10px rgba($color-2, 0.2);
     }
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
   }
 
   .block-text-1 {

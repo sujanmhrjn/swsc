@@ -47,8 +47,70 @@ $(window).on("load",function(){
     $(".block-text a").on("click",function(e){
       e.preventDefault();
       var _targetId = $(this).attr("href");
+      
       $(".c-overlay").animate({"max-width": "100%"},500,function(){
         $(document).find(".tab-item"+_targetId).fadeIn(100,function(){
+         
+          anime({
+            targets: '.c-overlay .animate',
+            translateY: -20,
+            opacity:1,
+            easing: 'easeInOutSine',
+            delay: anime.stagger(50)
+          });
+          
+        });
+        
+      });
+      
+    });
+
+    $(document).on("click", ".overlay-close", function(e){
+      e.preventDefault();
+      
+      anime({
+        targets: '.c-overlay .animate',
+        translateY: 20,
+        opacity:0,
+        easing: 'easeInOutSine',
+        complete: function(anim) {
+                    
+          $(".tab-item").fadeOut(500,function(){ $(".c-overlay").animate({"max-width":"0%"}, 500)});
+          $(".c-tab").removeClass("tab-visible");
+        }
+      });
+     
+      
+    });
+
+    $(document).on("click",".c-logo",function(e){
+      if($(window).width() < 992){
+        $(".c-overlay").animate({"max-width": "100%"},500,function(){
+          $(document).find(".tab-item#swsc-school").fadeIn(100,function(){
+            anime({
+              targets: '.c-overlay .animate',
+              translateY: -20,
+              opacity:1,
+              easing: 'easeInOutSine',
+              delay: anime.stagger(50)
+            });
+           
+          });
+          $(document).find(".tab-head-item").removeClass("active");
+          $(document).find(".tab-head-item").eq(0).addClass("active");
+          $(".c-tab").addClass("tab-visible");
+        });
+      }
+    });
+
+    $(".tab-head-item").on("click",function(e){
+      e.preventDefault();
+      $(document).find(".tab-head-item").removeClass("active");
+      $(this).addClass("active");
+      var _targetId = $(this).data("target");
+      $(document).find(".tab-item").fadeOut();
+      $(".c-overlay").animate({"max-width": "100%"},500,function(){
+        $(document).find(".tab-item#"+_targetId).fadeIn(100,function(){
           anime({
             targets: '.c-overlay .animate',
             translateY: -20,
@@ -61,19 +123,5 @@ $(window).on("load",function(){
       });
     })
 
-    $(document).on("click", ".overlay-close", function(e){
-      e.preventDefault();
-      anime({
-        targets: '.c-overlay .animate',
-        translateY: 20,
-        opacity:0,
-        easing: 'easeInOutSine',
-        complete: function(anim) {
-                    
-          $(".tab-item").fadeOut(500,function(){ $(".c-overlay").animate({"max-width":"0%"}, 500)});
-        }
-      });
-     
-      
-    })
+    
 });
