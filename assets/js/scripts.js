@@ -5,7 +5,7 @@ $(window).on("load",function(){
       $("."+image).css("opacity",1);
       $(".c-background").addClass("image-active");
     },function(){
-      $(".image").css("opacity",0);
+     $(".c-background .image").css("opacity",0);
       $(".c-background").removeClass("image-active");
     });
     anime({
