@@ -43,8 +43,8 @@
   .block-3,
   .block-4 {
     position: absolute;
-    height: 110px;
-    width: 110px;
+    height: 100px;
+    width: 100px;
     background-color: orange;
     border-radius: 10px;
     margin: 0 auto;
@@ -86,20 +86,20 @@
   }
   &:hover {
     .block-1 {
-      margin-top: -60px;
-      margin-left: 60px;
+      margin-top: -55px;
+      margin-left: 55px;
     }
     .block-2 {
-      margin-top: 60px;
-      margin-left: 60px;
+      margin-top: 55px;
+      margin-left: 55px;
     }
     .block-3 {
-      margin-top: 60px;
-      margin-left: -60px;
+      margin-top: 55px;
+      margin-left: -55px;
     }
     .block-4 {
-      margin-top: -60px;
-      margin-left: -60px;
+      margin-top: -55px;
+      margin-left: -55px;
     }
   }
   .block-text-1,
